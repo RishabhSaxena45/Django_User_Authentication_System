@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 400px;
+            width: 600px;
+            background-color: aqua;
+            margin: 100px auto;
+            border-radius: 30px;
+        }
+        .head{
+            background-color: coral;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            background-color: yellow;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            font-size: 15px;
+            background-color: coral;
+            margin-left: 240px;
+        }
+        button:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+   <!-- <h1>Name : {{student.name}}</h1>
+   <h1>Age : {{student.age}}</h1>
+   <h1>Course : {{student.course}}</h1>
+
+   <a href="/based/list">Back Home</a> -->
+   <div class="box">
+    <h2 class="head">SHOWING DETAILS</h2>
+    <h2>Name : {{student.name}}</h2>
+   <h2>Age : {{student.age}}</h2>
+   <h2>Course : {{student.course}}</h2>
+   <br><br>
+   <a href="/based/list"><button>BACK HOME</button></a>
+   </div>
+</body>
+</html>

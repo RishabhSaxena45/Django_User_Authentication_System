@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 500px;
+            border-radius: 30px;
+            background-color: aqua;
+            margin: 150px auto;
+        }
+        input{
+            width: 150px;
+            height: 50px;
+            background-color: coral;
+            margin-left: 160px;
+            font-size: 20px;
+        }
+        input:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 style="text-align: center;"> Name : {{student.name}}</h1>
+    <h2 style="text-align: center; background-color: coral;">Are you sure you want to delete the data?</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <br><br>
+        <input type="submit" value="Confirm Delete">
+    </form>
+    </div>
+
+</body>
+</html>

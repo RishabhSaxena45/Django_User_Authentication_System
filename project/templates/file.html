@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .filedata{
+            height: 200px;
+            width: 700px;
+            margin: 100px auto;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="filedata">
+    <form action="" method="post" enctype="multipart/form-data">
+        <h1 style="text-align: center;">ADD FILES HERE</h1>
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit Now">
+    </form>
+    </div>
+</body>
+</html>

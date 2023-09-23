@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .heading{
+            height: 100px;
+            width: 100%;
+            background-color: royalblue;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .table{
+            margin-left: 250px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        tr {
+        border-bottom: 1px solid black;
+        /* border-top: 1px solid black; */
+        border-collapse: collapse;
+        border-left: none;
+        border-right: none;
+        }
+        tr:nth-child(even){
+            background-color: coral;
+        }
+        tr:nth-child(odd){
+            background-color: burlywood;
+        }
+        tr:first-child{
+            background-color: cadetblue;
+            font-weight: 800;
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            color: blue;
+            background-color: white;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            font-size: 15px;
+            background-color: aquamarine;
+        }
+        button:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CRUD APPLICATION</h1>
+    <br><br><br>
+    <div class="table">
+
+    <table cellspacing="5px">
+        <tr>
+            <td height="50px" width="50px">Id</td>
+            <td width="150px">Name</td>
+            <td width="150px">Age</td>
+            <td width="150px">Course</td>
+            <td width="250px">Actions</td>
+            <td width="150px">Details</td>
+        </tr>
+        {% for x in object_list %}
+        <tr>
+            <td height="50px"  width="150px" >{{x.id}}</td>
+            <td width="150px" >{{x.name}}</td>
+            <td width="150px" >{{x.age}}</td>
+            <td width="150px" >{{x.course}}</td>
+            <td width="150px" ><a href="/based/update/{{x.id}}"><button>UPDATE</button></a> <a href="/based/delete/{{x.id}}"><button>DELETE</button></a></td>
+            <td width="150px" ><a href="/based/detail/{{x.id}}"><button>GET DETAILS</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <a href="/based/create" style="margin-left: 700px;"><button>ADD DATA</button></a>
+</body>
+</html>
